@@ -14,6 +14,10 @@
       </li>
     </ul>
 
+
+
+
+
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
@@ -25,6 +29,11 @@
         </div>
       </div>
     </form>
+
+
+
+
+
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -86,6 +95,11 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
         </div>
       </li>
+
+
+
+
+
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -113,11 +127,21 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
+
+
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+
+     <li class="nav-item">
+        <a class="nav-link" href="{{ route('logout') }}">
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </li>
+
+
     </ul>
   </nav>
   <!-- /.navbar -->

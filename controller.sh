@@ -1,65 +1,101 @@
 #!/bin/sh
 
-echo 'Escriba el nombre del Controlador'
+clear
+#################################################################################################################################
+echo -e "\e[92m ############################################################################################################ \e[0m"
+echo -e "\e[93m #                                                                                                          # \e[0m"
+echo -e "\e[93m # Automatizacion Controller 1.2                                                                            # \e[0m"
+echo -e "\e[93m #                                                                                                          # \e[0m"
+echo -e "\e[92m ############################################################################################################ \e[0m"
+echo -e "\e[93m # Febrero 2020                                                                                             # \e[0m"
+echo -e "\e[92m ############################################################################################################ \e[0m"
+echo -e "\e[92m ############################################################################################################ \e[0m"
+echo -e "\e[93m #                                                                                                          # \e[0m"
+echo -e "\e[93m # WixanCL                                                                                                  # \e[0m"
+echo -e "\e[93m # wwww.wixan.cl                                                                                            # \e[0m"
+echo -e "\e[93m #                                                                                                          # \e[0m"
+echo -e "\e[92m ############################################################################################################ \e[0m"
 
+echo -e "\e[92m  \e[0m"
+echo -e "\e[96m Escriba el Nombre del Controlador \e[0m"
+echo -n " >> "
 read nombre
-echo "----nombre"
-echo "$nombre"
+
+echo -e "\e[92m  \e[0m"
+echo -e "\e[92m  \e[0m"
+
+
+#################################################################################################################################
+echo -e "\e[96m Creando lista de Variables \e[0m"
+echo -e "\e[92m  \e[0m"
+echo -e "\e[92m  \e[0m"
+
+echo -e "\e[32m ""Controlador"" \e[94m variable \e[91m >> \e[93m \$nombre \e[97m= \e[96m $nombre \e[92m OK \e[0m"
 
 s="s"
-echo "----s"
-echo "$s"
+echo -e "\e[32m ""Sufijo s"" \e[94m variable \e[91m >> \e[93m \$s  \e[97m= \e[96m $s \e[92m OK \e[0m"
 
 sub="$nombre$s"
-echo "----sub"
-echo "$sub"
+echo -e "\e[32m ""Nombre + Sufijo"" \e[94m variable \e[91m >> \e[93m \$sub  \e[97m= \e[96m $sub \e[92m OK \e[0m"
+
 
 Contr="Controller"
-echo "----Contr"
-echo Contr
-
+echo -e "\e[32m ""Texto Controller"" \e[94m variable \e[91m >> \e[93m \$Contr  \e[97m= \e[96m $Contr \e[92m OK \e[0m"
 
 variable="$nombre"
-echo "----variable"
-echo "$variable"
+echo -e "\e[32m ""Variable de Nombre"" \e[94m variable \e[91m >> \e[93m \$variable  \e[97m= \e[96m $variable \e[92m OK \e[0m"
 
 conmayuscula=$(echo -n ${variable:0:1} | tr '[:lower:]' '[:upper:]'; echo ${variable:1} | tr '[:upper:]' '[:lower:]')
-echo "----conmayuscula"
-echo "$conmayuscula"
+echo -e "\e[32m ""Nombre con mayuscula"" \e[94m variable \e[91m >> \e[93m \$conmayuscula  \e[97m= \e[96m $conmayuscula \e[92m OK \e[0m"
 
 Contr2="$conmayuscula$Contr.php"
-echo "----Contr2"
-echo "$Contr2"
+echo -e "\e[32m ""Nombre archivo controlador"" \e[94m variable \e[91m >> \e[93m \$Contr2 \e[97m= \e[96m $Contr2 \e[92m OK \e[0m"
 
 Contr3="$conmayuscula$Contr"
-echo "----Contr3"
-echo "$Contr3"
+echo -e "\e[32m ""Nombre variable controlador"" \e[94m variable \e[91m >> \e[93m \$Contr3 \e[97m= \e[96m $Contr3 \e[92m OK \e[0m"
 
 Contr4="$conmayuscula$s"
-echo "----Contr4"
-echo "$Contr4"
+echo -e "\e[32m ""Mayuscula con S"" \e[94m variable \e[91m >> \e[93m \$Contr4 \e[97m= \e[96m $Contr4 \e[92m OK \e[0m"
 
 tablefinal="_table.php"
-echo "----tablefinal"
-echo "$tablefinal"
+echo -e "\e[32m ""Final Migracion"" \e[94m variable \e[91m >> \e[93m \$tablefinal \e[97m= \e[96m $tablefinal \e[92m OK \e[0m"
 
 asterisco="*"
-echo "----*"
-echo "$asterisco"
+echo -e "\e[32m ""asterisco"" \e[94m variable \e[91m >> \e[93m \$asterisco \e[97m= \e[96m $asterisco \e[92m OK \e[0m"
+
 
 subfinal="$asterisco$sub$tablefinal"
-echo "----subfinal"
-echo "$subfinal"
+#echo "----subfinal"
+#echo "$subfinal"
 
 Create="Create"
 Table="Table"
 CreateNombresTable=$Create$Contr4$Table
 
 
+echo -e "\e[94m Ejecutado \e[92m OK \e[0m"
+echo -e "\e[92m  \e[0m"
+echo -e "\e[92m  \e[0m"
 
+
+
+#################################################################################################################################
+
+#################################################################################################################################
+echo -e "\e[96m Ejecutando comnado Artisan \e[0m"
+echo -e "\e[91m >> \e[94m php artisan make:model $nombre -m -c -r \e[0m"
 php artisan make:model $nombre -m -c -r
-
+echo -e "\e[94m Ejecutado \e[92m OK \e[0m"
+echo -e "\e[92m  \e[0m"
+echo -e "\e[92m  \e[0m"
+#################################################################################################################################
+echo -e "\e[96m Creando directorio resources \e[0m"
+echo -e "\e[91m >> \e[94m mkdir resources/views/$nombre \e[0m"
 mkdir resources/views/$nombre
+echo -e "\e[94m Ejecutado \e[92m OK \e[0m"
+echo -e "\e[92m  \e[0m"
+echo -e "\e[92m  \e[0m"
+#################################################################################################################################
 echo " " >> resources/views/$nombre/create.blade.php
 echo " " >> resources/views/$nombre/destroy.blade.php
 echo " " >> resources/views/$nombre/edit.blade.php
@@ -67,8 +103,10 @@ echo " " >> resources/views/$nombre/index.blade.php
 echo " " >> resources/views/$nombre/show.blade.php
 echo " " >> resources/views/$nombre/store.blade.php
 echo " " >> resources/views/$nombre/update.blade.php
+#################################################################################################################################
 echo "// Rutas $nombre " >> routes/web.php
 echo "Route::resource('$nombre', '$nombre$Contr');" >> routes/web.php
+#################################################################################################################################
 
 
 

@@ -1,14 +1,18 @@
 #!/bin/sh
 
 #clear
+
+
+presentacion()
+{
 ################################################################################################################################################################
 #Pantalla de Presentacion                                                                                                                                      #
 ################################################################################################################################################################
 echo -e "\e[92m ################################################# \e[0m"
 echo -e "\e[93m #                                               # \e[0m"
-echo -e "\e[93m # Automatizacion Controller 2.6                 # \e[0m"
+echo -e "\e[93m # Automatizacion Controller 3.0                 # \e[0m"
 echo -e "\e[93m #                                               # \e[0m"
-echo -e "\e[93m # Archivo de Instalacion                        # \e[0m"
+echo -e "\e[93m #                                               # \e[0m"
 echo -e "\e[93m #                                               # \e[0m"
 echo -e "\e[92m ################################################# \e[0m"
 echo -e "\e[92m ################################################# \e[0m"
@@ -22,54 +26,12 @@ echo -e "\e[93m #                                               # \e[0m"
 echo -e "\e[92m ################################################# \e[0m"
 echo -e "\e[92m  \e[0m"
 
-echo -e "\e[96m Escriba el Nombre o IP del servidor \e[0m"
-echo -n " >> "
-read  server
-echo  $server
-echo -e "\e[92m  \e[0m"
+}
 
-echo -e "\e[96m Escriba el usuario de la base de datos \e[0m"
-echo -n " >> "
-read dbuser
-echo  $dbuser
-echo -e "\e[92m  \e[0m"
-
-
-echo -e "\e[96m Escriba la cotrasena del usaurio de la base de datos \e[0m"
-echo -n " >> "
-read dbuserpass
-echo  $dbuserpass
-echo -e "\e[92m  \e[0m"
-
-echo -e "\e[96m Escriba el nombre de la base de datos que desea crear \e[0m"
-echo -n " >> "
-read db
-echo  $db
-mysql -h $server -u $dbuser -p$dbuserpass -e "CREATE DATABASE $db;"
-echo -e "\e[92m  \e[0m"
-
-
-if [ -d "vendor" ]
-then
-   echo "El directorio vendor existe"
-else
-   echo "El directorio vendor no existe"
-fi
-
-
-echo -e "\e[92m  \e[0m"
-echo -e "\e[92m  \e[0m"
+presentacion
 
 
 
-
-
-
-
-
-
-
-################################################################################################################################################################
 
 
 
